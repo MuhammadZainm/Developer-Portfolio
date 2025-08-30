@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+text-decoration:none;
+color: white;
+transition: all 3s ease;
+}
+#background {
+   min-height:  70vh;
+width: 99%;
+background-image: url(PK-en-20250818-TRIFECTA-perspective_faa879b7-3577-487b-b1b3-496863107eb1_large.jpg);
+/* background-position: 25%; */
+background-size: 150vh;
+background-repeat: no-repeat ;
+  background-color: rgba(0,0,0,0.7);
+  background-image: url(PK-en-20250818-TRIFECTA-perspective_faa879b7-3577-487b-b1b3-496863107eb1_large.jpg);
+background-blend-mode:color;
+  border: 1px solid transparent;
+border-bottom-left-radius: 15%;
+border-bottom-right-radius: 15%;
+
+
+}
+body{
+    background-color:  black;
+    min-height: 330vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+header{
+    /* height: 10vh; */
+    width: 100%;
+}
+#hlogo{
+    width:27%;
+    height: 80%;
+    background-image: url(Netflix_Logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 2vw;
+}
+#button{
+width: 18%; 
+margin-right: 17px;
+
+}
+#upper button{
+background-color: red;
+color: white;
+justify-content: center;
+align-items: center;
+display: flex;
+height: 60%;
+width: 20vw;
+border-radius: 15%;
+border: 1px solid red;
+margin-right: 7px;
+font-size: medium;
+transition: all 3s ease;
+}
+#upper{
+    background-color: rgba(0,0,0,0.4);
+    background-blend-mode: multiply;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* align-items: end; */
+    border: 1px solid transparent;
+    border-bottom-right-radius:25% ;
+    border-bottom-left-radius:25% ;
+}
+/* .space{
+    height: 100px;
+    width: 100%;
+    margin-bottom: 15vh;
+} */
+.b{
+    font-size: xx-large;
+    font-weight: bold;
+}
+#content{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center; */
+    gap: 20px;
+    min-height:200vh ;
+    margin-bottom: 8vh;
+    background-color: rgba(32, 32, 32,0,4);
+}
+#uppercon{
+    height:70vh;
+    width:100%;
+       background-color: rgba(0,0,0,0.4);
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items:center; 
+       gap: 10px;
+    }
+    #uppercon span{
+    display: inline-block; width: 100%;
+    text-align: center;
+}
+#em{
+height: 8vh;
+width: 85%;
+color: white;
+}
+#em input{
+    width: 98%;
+height: 90%;
+background-color: inherit;
+border: 1px solid white;
+border-radius: 5%;
+font-size: large;
+font-weight: bolder;
+}
+@media (min-width:700px) {
+    #em input{
+    width: 98%;
+height: 60%;
+background-color: inherit;
+border: 1px solid white;
+border-radius: 5%;
+font-size: large;
+font-weight: bolder;
+max-height: 70px;
+max-width: 250px;
+}
+
+#upper button{
+background-color: red;
+color: white;
+justify-content: center;
+align-items: center;
+display: flex;
+height: 60%;
+width: 15vw;
+border-radius: 15%;
+border: 1px solid red;
+margin-right: 7px;
+font-size: medium;
+transition: all 3s ease;
+margin-right: 3vw;
+max-width: 75px;
+max-height: 32px;
+}
+#upper{
+    background-color: rgba(0,0,0,0.8);
+    background-blend-mode: multiply;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* align-items: end; */
+    border: 1px solid transparent;
+    border-bottom-right-radius:25% ;
+    border-bottom-left-radius:25% ;
+    margin-left:5px;
+    margin-right: 5px;
+}
+#em{
+height: 20vw;
+width: 85%;
+color: white;
+
+justify-content: center;
+gap: 4px;
+
+}
+#getStarted{
+    background-color:red ;
+    height:6vh ;
+    width: 40%;
+    
+    font-size: large;
+    font-weight: 700;
+    text-align: center;
+    max-width: 176px;
+
+}
+}
+#getStarted{
+    background-color:red ;
+    height:6vh ;
+    width: 40%;
+    
+    font-size: large;
+    font-weight: 700;
+    text-align: center;
+}
+#boxes{
+    height: 110vh;
+    width: 100%;
+    /* background-color: rgba(0,0,50,1); */
+    margin-bottom: 5vh;
+}
+#uspace{
+    height: 7vh;
+    width: 100%;
+border-top:4px solid red ;
+border-bottom:4px solid black ;
+border-radius: 50%;
+background-color: rgba(0,0,50,1);
+}
+#box1{
+    margin-top: 5px;
+    height: 50%;
+    padding: 1vh;
+    width: 95%;
+    background: linear-gradient(150deg,rgba(0,0,80,0.9),rgba(70,0,0,0.9));
+    border: 2px solid initial;
+    border-radius: 7%;
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+#box1 span{
+    font-size: larger;
+    width: 90%;
+    color: rgb(182, 179, 179);
+}
+#box1 i{
+    font-size: 6vh;
+width: 90%;
+height: 6vh;
+display: inline-flex;
+flex-direction: row;
+justify-content: end;
+
+}
+#row1,#row2{
+    height: 50%;
+    width: 100%;
+}
+#faq{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: start;
+}
+details{
+min-height : 7vh;
+width: 88%;
+background-color: rgba(255,255,255,0.15);
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 1vh;
+transition: all 3s ease;
+}
+#faq summary{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#faq span{
+    margin-left: 5vw;
+    font-size: large;
+}
+#plus{
+   
+    font-size: 6vh;
+    margin-right: 5vw;
+}
+#lem input{
+    width: 98%;
+height: 5vh;
+background-color: inherit;
+border: 1px solid white;
+border-radius: 5%;
+font-size: large;
+font-weight: bolder;
+margin-top: 2vh;
+margin-bottom: 2vh;
+}
+#lem{
+    align-items: flex-start;
+    display: flex;
+}
+#lem #button{
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+Footer{
+    color: gray;
+    min-height: 100%;
+    padding-left: 5vw;
+}
+#col1,#col2,#col3,#col4{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+footer select{
+    background-color: inherit;
+    height: 4vh;
+    width: 20%;
+    color: white;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+footer span {
+    color:grey;
+    margin-bottom:0.5vh ;
+}
