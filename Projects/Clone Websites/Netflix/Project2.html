@@ -27,8 +27,10 @@
       <div class="carousel">
           <div id="uspace"  class="divs"></div>
 <span>Trending Now</span>
-  <div class="carousel-track">
+<div style="display: flex;flex-direction: row; width: 100%;">
   <button class="prev"><i class="fa-solid fa-angle-left"></i></button>
+  <div class="carousel-track">
+
     <div class="card" id="c1"><span>1</span></div>
     <div class="card"id="c2"><span>2</span></div>
     <div class="card"id="c3"><span>3</span></div>
@@ -39,14 +41,15 @@
     <div class="card"id="c8"><span>8</span></div>
     <div class="card"id="c9"><span>9</span></div>
     <div class="card"id="c10"><span>10</span></div>
-      <button class="next"><i class="fa-solid fa-angle-right"></i></button>
+    
   </div>
-
+  <button class="next"><i class="fa-solid fa-angle-right"></i></button>
+  </div>
 </div>
          <div id="boxes" class="divs"> 
 
 <span style="text-align: left; width: 90%; font-size: large;">More Reasons to join</span>
-<div id="row1"  class="divs">
+<div id="row1"  >
 <div id="box1" class="divs">
     <span style="font-weight: bolder;font-size: larger; text-align: left;color:white;margin-top: 5%;">Enjoy on your TV</span>
     <span>Watch on Smart TVs,Playstation,Xbox
@@ -95,7 +98,7 @@
     
     </i></div>
 </div>
-<div id="row2" class="divs">
+<div id="row2" >
 <div id="box1" class="divs">
     <span style="font-weight: bolder;font-size: larger; text-align: left;color:white;margin-top: 5%;">Watch everywhere</span>
     <span>Stream unlimited movies and TV shows on your phone,tablet,laptop and TV.</span>
@@ -201,16 +204,18 @@ Kids profiles come with PIN-protected parental controls that let you restrict th
 
 
          </div>
-         <div id="lem" class="divs">
-         <span style="text-align: left; width: 99%;">Ready to watch? Enter your email to create or restart membership.</span>
+         <span style="text-align: left; width: 100%; align-self: self-start;margin-left: 37px;">Ready to watch? Enter your email to create or restart membership.</span>
+         <div id="lem">
+         
  <input type="email" placeholder="Email address">   
-<div id="button"class="divs"> <button id="getStarted">Get Started  </button></div>
+<button id="getStartedb"><span style="background-color: transparent; color: white;">Get Started</span>  </button>
         </div>
         <div class="space"class="divs"></div>
       </div>
         </div>
         <footer>
           <span style="text-align: left; width: 99%;margin-left: 4vw; margin-bottom: 5vh ; display: inline-block; ">Questions? Contact us.</span>
+          <div id="cols">
           <div id="col1"class="divs">
 <span>FAQ</span>
 <span>Investor Relations</span>
@@ -238,11 +243,101 @@ Kids profiles come with PIN-protected parental controls that let you restrict th
 <span>Terms of use</span>
 <span>Contact Us</span> 
           </div>
+          </div>
           <select name="English" id="Language">English<option value="1">English</option></select>
           <span style="display: inline-block; margin-bottom: 1.25vh; width: 100%; text-align: left;margin-left: 4vw;">Netflix Pakistan</span>
-          <span style="font-size: small; color: rgb(156, 154, 154);">This page is protectded by Google reCAPTCHA to ensure you're not a bot.<span style="color: rgb(77, 77, 253); font-size: medium;">Learn More.</span></span>
+          <span style="font-size: small; color: rgb(156, 154, 154);margin-left: 25px;">This page is protectded by Google reCAPTCHA to ensure you're not a bot.<span style="color: rgb(77, 77, 253); font-size: medium;">Learn More.</span></span>
         </footer>
+ <script>
+  const mq1 = window.matchMedia("(max-width: 768px)");
+const mq4 = window.matchMedia("(min-width: 768px) and (max-width: 1280px)");
+const mq5 = window.matchMedia("(min-width: 1281px)");
  
-        
+
+
+function handleScreenChange() {
+  if (mq1.matches) {
+    console.log("📱 Small screen: 0 - 768px");
+    // your JS for this range
+     const track = document.querySelector('.carousel-track');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+let index = 0;
+
+next.addEventListener('click', () => {
+  if (index < 10 - 5) { // total - visible
+    index++;
+    track.style.transform = `translateX(-${index * 43}%)`;
+  }
+});
+
+prev.addEventListener('click', () => {
+  if (index > 0) {
+    index--;
+    track.style.transform = `translateX(-${index * 45}%)`;
+  }
+});
+
+  } 
+   else if (mq4.matches) {
+    console.log("📱 Small screen: 768px-1025px");
+    // your JS for this range
+     const track = document.querySelector('.carousel-track');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+let index = 0;
+
+next.addEventListener('click', () => {
+  if (index < 1) { // total - visible
+    index++;
+    track.style.transform = `translateX(-${index * 110}%)`;
+  }
+});
+
+prev.addEventListener('click', () => {
+  if (index > 0) {
+    index--;
+    track.style.transform = `translateX(-${index * 45}%)`;
+  }
+});
+
+  }
+   else if (mq5.matches) {
+    console.log("📱 Small screen: 0 - 768px");
+    // your JS for this range
+     const track = document.querySelector('.carousel-track');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+let index = 0;
+
+next.addEventListener('click', () => {
+  if (index < 10 - 5) { // total - visible
+    index++;
+    track.style.transform = `translateX(-${index * 45}%)`;
+  }
+});
+
+prev.addEventListener('click', () => {
+  if (index > 0) {
+    index--;
+    track.style.transform = `translateX(-${index * 45}%)`;
+  }
+});
+
+  }
+}
+
+// Run once on load
+handleScreenChange();
+
+// Add event listeners to react on resize
+[mq1, mq2, mq3, mq4, mq5].forEach(mq => {
+  mq.addEventListener("change", handleScreenChange);
+});
+
+ </script>
 </body>
 </html>
