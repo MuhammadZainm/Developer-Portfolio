@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGGED</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+div{
+background-color: rgba(50, 50, 50, 0.4);
+justify-self: center;
+align-self: center;
+position: absolute;
+top: 50%;
+height: 30%;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 100px;
+}
+span{
+    display: inline-block;
+    animation: slide 4s linear infinite;
+}
+@keyframes slide{
+    0%{
+        transform: translateX(-125%);
+    }
+    100%{
+        transform: translateX(125%);
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+    <div> 
+        <span>ACCOUNT CREATED</span>
+    </div>
+</body>
+</html>
