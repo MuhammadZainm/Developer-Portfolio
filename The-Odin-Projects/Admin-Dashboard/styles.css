@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+body{
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(9,1fr);
+    margin: 0;
+    padding: 0;
+    font-family: "roboto";
+    overflow: visible;
+}
+#sidebar{
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: left;
+grid-area:1/1/10/1 ;
+display: flex;
+flex-direction: column;
+justify-content: start;
+color: white !important;
+gap:25px;
+}
+#sidebar > div{
+margin-left: 20px;
+cursor: pointer;
+display: flex;
+flex-direction: column;
+justify-content: start;
+align-items: start;
+margin-top: 10px;
+
+}
+#sidebar div div:hover{
+border-left: 15px solid white;
+border-radius: 99px;
+}
+
+#sidebar > div > div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 13px;
+    width: 100%;
+    transition: 0.2s all linear;
+}
+
+#sidebar i{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+}
+
+
+header{
+grid-area: 1/2/1/6;
+display: grid;
+grid-template-rows: repeat(3,1fr);grid-template-columns:repeat(5,1fr);
+padding-right: 30px;
+}
+content{
+    background-color: #c29797;
+    grid-area: 2/2/10/7;
+}
+
+
+
+
+/* header SEction */
+
+
+
+#imgdiv1{
+height: 28px;
+width: 28px;
+border: 1px solid gray;
+border-radius:50% ;
+overflow: hidden;
+}
+#imgdiv1 img{
+    height: 100%;
+    width: 100%;
+}
+#top{
+    grid-area: 1/1/1/6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+#top >div{
+    margin-left: 40px;
+    margin-right: 30px;
+    padding-top: 10px;
+}
+#top input{
+    width:90%;
+    height: 30px;
+    background-color: rgb(250, 224, 222);
+border: none;
+    border-radius: 999px;
+    margin-left: 10px;
+    transition: 0.08s;
+    outline: none;
+}
+input:focus-visible{
+    border:3px solid rgb(219, 32, 32) !important;
+}
+#srch{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: start;
+}
+#top-right{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+#name{
+    /* padding-top: 10px; */
+    font-weight: bold;
+    font-size: smaller;
+}
+header i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    padding-top: 3PX;
+}
+#btm{
+      grid-area: 2/1/4/6;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 15px;
+}
+#btm >div{
+    display: flex;
+    /* justify-content: start; */
+    width: 45%;
+    padding-left: 45px;
+    gap: 15px;
+}
+#imgdiv2{
+   max-height: 70px;
+    max-width: 70px;
+    height: 70%;
+    width: 55%;
+    border-radius: 50%;
+    display: flex;
+    border: 1px solid darkred;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+#imgdiv2 img{
+    height: 100%;
+    width: 100%;
+}
+#txt{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 4px;
+}
+#hi{
+    font-size: x-small;
+    font-weight: bold;
+}
+#name2{
+    font-size: large;
+    font-weight: bold;
+}
+#btns button{
+    height: 25px;
+    width: 20%;
+    border-radius: 999px;
+    background-color:rgb(219, 32, 32);
+    border: none;
+    color: rgb(245, 245, 245);
+}
+#btns{
+    padding-top:10px;
+    display:flex;
+    justify-content: end;
+}
+
+
+
+
+
+
+/* content  */
+
+
+
+content{
+padding-left: 15px;
+padding-right: 15px;
+padding-top:8px ;
+padding-bottom: 8px;
+overflow: hidden;
+height: 600px;
+color: darkred;
+}
+#sidebar {
+    color: rgb(245, 68, 68);
+}
+.card{
+    background-color: white;
+    border-radius: 9px;
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(20px,20%,40px );
+   border-left: 6px solid rgba(219, 166, 32,0);
+   transition: all 0.4s;
+    /* padding: 30px; */
+}
+.card:hover{
+ border-left: 6px solid rgb(219, 32, 32);
+}
+
+#container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows:repeat(6,1fr) ;
+    width: 100%;
+    height: 96%;
+    gap:6px;
+    /* overflow: hidden; */
+}
+.card p{
+    color:  #eebcbc;;
+
+}
+.icons{
+display: flex;
+justify-content: end;
+width: 100%;
+}
+button:hover{
+box-shadow: 0 !important;
+transform: translateY(-1px);
+}
+#lcards{
+    grid-area: 1/1/7/4;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+    display: grid;
+    padding-bottom: 8px;
+}
+#rcards{
+  text-align: center;
+    height: 100%;
+    display: grid;
+    grid-area: 1/4/7/5;
+    grid-template-rows: 1.2fr 1fr;
+    gap: 6px;
+}
+#rtcard{
+/* background-color: black; */
+display: flex;
+flex-wrap: wrap;
+overflow: hidden;
+text-align: center;
+border-radius: 9px;
+}
+
+#rbcard{
+    /* background-color: yellow; */
+display: flex;
+flex-wrap: wrap;
+}
+header, content{
+    color: darkred;
+}
+#rtcard h4, #rbcard h4{
+    justify-self: center;
+    align-self: center;
+    width: 99%;
+    text-align: center;
+}
+#rtcard #card{
+    height: 97%;
+    background-color: white;
+    border: 1px solid inherit;
+    border-radius: 9px;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    /* gap:10px; */
+}
+#ne, #wo{
+    border-bottom: 2px solid#c2606031;
+    padding: 3px;
+}
+#rtcard #card p{
+    color: #eebcbc;
+    font-size: 11px;
+}#rbcard #card{
+height: 92%;
+width: 95%;
+border-radius: 9px;
+background-color: white;
+display: flex;
+flex-direction: column;
+gap: 5px;
+font-size: small;
+}
+#rbcard #card .imgd{
+    height: 70%;
+    width: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+#rbcard #card .imgd img{
+    height: 100%;
+    width: 100%;
+}
+#rbcard #card span{
+color: #eebcbc;
+}
+#rbcard #card > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    height: 23%;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    transition: all 0.02s linear;
+    /* margin-bottom: 4px; */
+  
+}
+#rbcard #card > div:hover{
+    border-bottom: 2px solid #eebcbc;
+ border-top: 2px solid  #eebcbc;}
+ #card ,.card, button, i, img, span, h1,h2,h3,h4,h5,h6{
+  cursor: pointer; 
+ }
