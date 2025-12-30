@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto';
+    color: white;
+}
+body{
+min-height: 1000px;
+
+
+}
+#top{
+    height:35%;
+    min-height: 280px;
+    width:100%;
+    background-color:#1F2937;
+display: flex;
+flex-direction: column;
+}
+#uptop{
+    height: 25%;
+    min-height: 70px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+text-decoration: none;
+}
+#hlogo{
+height:100%;
+width: 30%;
+max-width: 100px;
+background-image: url(h.jpg);
+background-size: contain;
+background-repeat: no-repeat;
+/* background-attachment:left; */
+}
+#hlinks a{
+text-decoration: none;
+}
+#hlinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    min-width: 20%;
+}
+#mdtop{
+    height: 60%;
+    width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+#mdtext{
+    height: 100%;
+    width: 35%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+#mdtext span{
+    font-size: 48px;
+color: #f9faf8;
+font-weight: 900;
+}
+#mdtext p, #hlinks a{
+    font-size: 18px;
+color: #E5e7eb;
+
+}
+#mdtext button{
+    width: 100px;
+    height: 55px;
+    border-radius: 10%;
+    border: none;
+    background-color: #3882F6;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#mdtop img{
+    height: 100%;
+    width: 35%; 
+}
+#mid span{
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+
+}
+#mid{
+    height: 45%;
+    min-height: 150px;
+    width: 100%;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#mbox1, #mbox2, #mbox3, #mbox4{
+    height: 100%;
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+#midboxes{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10%;
+}
+#box1,#box2,#box3,#box4{
+    height: 70%;
+    width: 90%;
+    background-color: white;
+    border: 2px solid #3882F6;
+    border-radius: 15px;
+}
+#box1{
+    background-image: url(box1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#box2{
+    background-image: url(box2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#box3{
+    background-image: url(box3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#box4{
+    background-image: url(box4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#mbox1 span, #mbox2 span, #mbox3 span, #mbox4 span{
+  font-size: 18px;
+  color: #b2b3b4;
+  width: 100%;
+  text-align: center;
+  padding-right: 15px;
+}
+#qsection{
+    height: 30%;
+    min-height: 100px;
+    width: 100%;
+    background-color: #E5e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:36px ;
+    color: #1F2937;
+    font-weight: 300;
+    margin-bottom: 10%;
+}
+    #qsection span{
+        font-size: 36px;
+        font-weight: 900;
+        color: black;
+        width: 90%;
+        text-align: right;
+    }
+    #qsection p{
+        font-size: 24px;
+        color: #1F2937;
+        font-weight:100 ;
+        text-align: left;
+        width: 60%;
+        margin-top: 5px;
+    }
+    #cta{
+height: 25%;
+max-height: 100px;
+width: 80%;
+background-color:#3882F6 ;
+justify-self: center; 
+display: flex;
+flex-direction:row;
+justify-content: space-between;
+margin-bottom: 5%; }
+#cta #text{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* margin-left: 5%; */
+    font-size: 16px;
+    font-weight: 700;
+     margin-left: 16%;
+}
+#cta #s{
+    font-weight: 300;
+}
+#cta button{
+    height: 50%;
+    width: 15%;
+    border-radius: 10%;
+    border: 1px white solid;
+    background-color: #3882F6;
+
+    font-size: 18px;
+    cursor: pointer;
+    align-self: center;
+    margin-right: 5%;
+}
