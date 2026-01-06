@@ -1,1 +1,327 @@
+:root {
+  --c4: #73ff00;
+  --c1: #ff9900;
+  --c3: #fff200;
+  --c2: #00ffff;
+   --c4h: hsl(93, 100%, 33%);
+  --c1h: #b56c00;
+  --c3h: #b7ae02;
+  --c2h: #009898;
+  --p1:rgb(0, 234, 255);
+  --p2:red;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+#turnshow{
+  font-size: xx-large;
+  font-family: "Montserrat";
+}
+body{
+display: flex;
+color: rgb(247, 242, 236);
+flex-direction: column;
+justify-content: start;
+gap: 20px;
+align-items: center;
+flex-wrap: nowrap;
+overflow: hidden;
+font-family:"Montserrat","Roboto", "Oxygen","Inter";
+background-color: rgb(1, 89, 1);
+min-height: 100vh;
+width: 100%;
+}
+dialog{
+  display: none;
+}
+#closebtn{
+  width: 100%;
+  height: clamp(28px,25%,30px);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: end;
+  background-color: black;
+  color: white;
+}
+.hx{
+color: var(--p1);
+}
+.ho{
+color: var(--p2);
+}
+#closebtn i{
+  width: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#closebtn i:hover{
+  height: 100%;
 
+
+  background-color: darkred;
+}
+dialog[open]{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+    justify-self: center;
+    overflow: none;
+  align-self: center;
+  align-items: center;
+  height: clamp(105px,36vh,165px);
+ justify-content: start;
+  gap: 5px;
+}
+dialog[open] input{
+  border-radius: 9px;
+  padding: 4px;
+}
+dialog[open] form{
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+form button{
+  width: 30%;
+  
+}
+dialog[open] div label{
+  width: 67%;
+  text-align: left;
+}
+dialog[open] div, #messegediv{
+height: 100%;
+width: 100%;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  flex-direction: column;
+  justify-content:center;
+  gap: 5px;
+  align-items: center;
+  text-align: center;
+}
+#closebtn i:active{
+transform: scale(97%);
+}
+dialog.name #colordiv,dialog.name #markdiv,dialog.name #messegediv,dialog.color #namediv,dialog.color #markdiv,dialog.color #messegediv,dialog.mark #namediv,dialog.mark #messegediv,dialog.mark #colordiv,dialog.color #messegediv,dialog.messege #formpopup{
+display: none;
+}
+header{
+  margin-bottom: 1%;
+    justify-content:space-between;
+      padding: 1%;
+}
+.headnfoot {
+
+  width: 100%;
+  display: flex;
+
+  align-items: center; 
+}
+.headnfoot span{
+  margin-left: 5px;
+  margin-right: 5px;
+font-size: xx-large;
+  cursor: pointer;
+}
+footer{
+  position:absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  font-size: medium;
+  justify-content: center;
+  margin-top: 1%;
+}
+#title{
+  cursor: pointer;
+   background: linear-gradient(135deg,
+    #ff0080,
+    #7cff00,
+    #ffb000,
+    #ff0080);
+    font-size: 2.5em;
+    -webkit-background-clip: text; /* make the background only show inside the text */
+  -webkit-text-fill-color: transparent; 
+    font-family: "Press Start 2P", monospace;
+   border-bottom: 4px solid;
+   border-top-left-radius: 12%;
+   border-top-right-radius:12% ;
+    border-bottom-right-radius: 12%;
+    border-bottom-left-radius: 12%;
+  background-size: 600% 600%;
+  animation: gradientShift 6s linear infinite;
+  /* flicker 2.5s infinite; */
+}
+.scoreboard i{
+ font-size: 2.5em;
+  opacity: 0;
+}
+.scoreboard.playing i{
+opacity: 1;
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+    
+  }
+}
+.btns{
+  padding: 9px;
+    background: linear-gradient(135deg,
+    #ff0080,
+    #7cff00,
+    #ffb000,
+    #ff0080);
+    background-size: 300% 300%;
+  border-radius: 9px;
+  animation: gradientShift 6s infinite;
+  cursor: pointer;
+  color: white;
+  font-family:  monospace;
+  font-weight: 500;
+}
+.scoreboard{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+  align-items: center;
+  font-size: xx-large;
+  
+}
+.btns:hover{
+transform: translateY(-1px);
+}
+.btns:active{
+  transform:scale(98%);
+}
+#container{
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  width: 100%;
+  height: clamp(500px,60vh,600px);
+}
+#gameboard{
+  border-radius: 3px;
+
+  display: grid;
+  height:clamp(320px,20vh,350px) ;
+  width:clamp(320px,20vh,350px) ;
+grid-template-rows:repeat(3,1fr) ;
+grid-template-columns:repeat(3,1fr)  ;
+   box-shadow:
+    0 0 10px rgba(114, 0, 57, 0.808),
+    0 0 20px rgba(0, 45, 49, 0.8),
+    inset 0 0 15px rgba(255,255,255,0.6);
+gap: none;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  border:2px solid transparent
+}
+#gameboard.g{
+  border-color: var(--c4);
+}
+#gameboard.y{
+    border-color: var(--c3);
+}
+#gameboard.o{
+  border-color: var(--c1);
+}
+#gameboard.b{
+  border-color: var(--c2);
+}
+
+#gameboard.g .cell{
+background-color: rgb(218, 251, 235);
+border: 3px solid var(--c4);
+
+}
+#gameboard.o .cell{
+  background-color: rgb(251, 218, 218);
+border: 3px solid var(--c1);
+}
+#gameboard.b .cell{
+  background-color: rgb(218, 251, 235);
+border: 3px solid var(--c2);
+}
+#gameboard.y .cell{
+  background-color: rgb(251, 245, 218);
+border: 3px solid var(--c3);
+}
+.cell{
+ box-shadow:
+    0 0 5px rgba(255, 0, 128, 0.6),
+    0 0 20px rgba(0, 234, 255, 0.5),
+    inset 0 0 2px rgba(255,255,255,0.1);
+opacity: 0.999;
+height: 100%;
+width: 100%;
+cursor: pointer;
+border: none;
+justify-content: center;
+align-items: center;
+justify-items: center;
+align-content: center;
+text-align: center;
+font-size: 3em;
+}
+.cell:active{
+  transform: scale(99%);
+}
+.cell:hover{
+  opacity: 1;
+}
+
+@media (max-width:650px) {
+.headnfoot{
+  height: clamp(30px,20vh,80px);
+}
+dialog[open]{
+height: clamp(150px,40vh,250px);
+width: 70%;
+
+}
+main{
+  display: flex;
+  flex: 0.6;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.scoreboard{
+  flex-direction: row;
+}
+#scoreboard1{
+flex-direction: row-reverse;
+}
+#btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gameboard{
+ justify-self: center;
+ align-self: center;
+}
+}

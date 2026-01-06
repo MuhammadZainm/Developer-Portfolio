@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="icon" href="favicon.png" type="image/x-icon">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="headnfoot"><span class="hx">X</span><h1 id="title">Tic Tac Toe</h1><span class="ho">O</span></header>
+    <!-- <nav></nav> -->
+     <span id="turnshow"></span>
+    <main id="container">
 
+        <div id="scoreboard1" class="scoreboard"><i class="fa-solid fa-gamepad"></i><span id="p1mark" class="hx"></span><span id="p1name"></span><div id="btns"><button class="btnname btns" id="btnname1">Change Name</button><button class="btns btnmark" id="btnmark1">Change Mark</button><button class="btns btnclr" id="btnclr1">Change Colour</button></div></div>
+<div id="gameboard">
+
+</div>
+  <div id="scoreboard2" class="scoreboard"><i class="fa-solid fa-gamepad"></i><span id="p2mark" class="ho"></span><span id="p2name"></span><div id="btns"><button class="btnname btns" id="btnname2">Change Name</button><button class="btns btnmark" id="btnmark2">Change Mark</button><button class="btns btnclr" id="btnclr2">Change Colour</button></div></div>
+    </main>
+    <footer class="headnfoot"><span>Made by: Muhammad Zain</span></footer>
+    <dialog id="popup">
+          <span id="closebtn"><i class="fa-solid fa-x"></i></span>
+        <div id="messegediv">You can only set the Mark and colour before the game starts.</div>
+        <form action="#" id="formpopup">
+        <div id="namediv"><label for="name">Enter The Name:</label>
+    
+            <input type="text" id="name" placeholder="Example:Bob" pattern="\S+" title="No spaces allowed" minlength="3" maxlength="60" required></div>
+<div id="colordiv">
+        <label for="color">Enter The Color</label>
+        <input type="color" id="color" required></div>
+        <div id="markdiv">
+        <label for="mark">Enter The Mark letter</label>
+        <input type="text" id="mark" maxlength="1" placeholder="Example:X,Y,Z" pattern="\S+" title="No spaces allowed" required></div>
+        <button class="btns">Done</button>
+        </form></dialog>
+    <script src="script.js"></script>
+</body>
+</html>
